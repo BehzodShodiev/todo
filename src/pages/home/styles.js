@@ -11,7 +11,7 @@ const useStyles = makeStyles((theme) => ({
   childContainer: {
     display: "flex !important",
     justifyContent: "space-between",
-    gap: "32px"
+    gap: "32px",
   },
   inputBox: {
     backgroundColor: "#cfe8fc",
@@ -40,14 +40,14 @@ const useStyles = makeStyles((theme) => ({
     height: "80vh",
     width: "60vw",
     borderRadius: "8px",
-    overflowY: "scroll",
+    overflow: "auto",
     scrollbarWidth: "thin",
     scrollbarColor: "#888888 #f0f0f0",
     "&::-webkit-scrollbar": {
       width: "10px",
     },
     "&::-webkit-scrollbar-track": {
-      backgroundColor: "#f0f0f0",   
+      backgroundColor: "#f0f0f0",
     },
     "&::-webkit-scrollbar-thumb": {
       backgroundColor: "#888888",
@@ -55,10 +55,24 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   listGrid: {
-    padding: "8px 16px"
+    padding: "8px 16px",
   },
   listItem: {
     marginTop: "16px !important",
+  },
+  lineThrough: {
+    textDecoration: "line-through",
+  },
+  searchField: {
+    width: "100%",
+    background: "#FFF",
+    borderRadius: "4px",
+    "&>*": {
+      height: "50px",
+    },
+    "& label": {
+      top: "-3px",
+    },
   },
 }));
 export default useStyles;
