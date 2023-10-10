@@ -1,24 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
-
+import MyRoutes from "./routes";
+import "./App.scss";
+import { createTheme } from "@mui/material";
+import { ThemeProvider } from "@mui/styles";
+import { SnackbarProvider } from "notistack";
 function App() {
+  const theme = createTheme();
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <SnackbarProvider
+      maxSnack={3}
+      anchorOrigin={{
+        vertical: "top",
+        horizontal: "right",
+      }}
+    >
+      <ThemeProvider theme={theme}>
+        <div className="App">
+          <MyRoutes />
+        </div>
+      </ThemeProvider>
+    </SnackbarProvider>
   );
 }
 

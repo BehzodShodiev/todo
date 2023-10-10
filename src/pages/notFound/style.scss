@@ -1,0 +1,19 @@
+.not-found {
+  margin-top: 20px;
+  &-block {
+    display: flex;
+    &-item {
+      margin: auto;
+    }
+  }
+  &-404 {
+    text-align: center;
+    margin: 25px 0;
+    h1 {
+      font-size: 130px;
+    }
+    p {
+      font-size: 25px;
+    }
+  }
+}
