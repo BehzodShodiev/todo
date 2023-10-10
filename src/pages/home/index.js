@@ -84,7 +84,7 @@ export default function Home(props) {
 
   // Function to display success message
   const messageSuccess = (msg) => {
-    enqueueSnackbar(msg, { variant: "success", action });
+    enqueueSnackbar(msg, { variant: "success", action, autoHideDuration: 3000 });
   };
 
   // Function to handle priority checkbox change
@@ -110,13 +110,13 @@ export default function Home(props) {
   const updateTodoHome = (updatedTodo) => {
     updateTodo(updatedTodo);
     setFetchToggle(!fetchToggle);
-    enqueueSnackbar("Successfully updated", { variant: "success", action });
+    enqueueSnackbar("Successfully updated", { variant: "success", action, autoHideDuration: 3000 });
   };
 
   // Function to delete a todo
   const onDelete = (id) => {
     removeTodo(id);
-    enqueueSnackbar("Successfully deleted", { variant: "success", action });
+    enqueueSnackbar("Successfully deleted", { variant: "success", action, autoHideDuration: 3000 });
     setFetchToggle(!fetchToggle);
   };
 
