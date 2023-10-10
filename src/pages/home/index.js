@@ -28,6 +28,7 @@ import TodoItem from "../../components/todoItem";
 import Sort from "../../components/dropdown";
 import CloseIcon from "@mui/icons-material/Close";
 import SearchField from "../../components/search";
+import EmptyList from "../../components/emptyList";
 
 // Create a SearchContext using createContext
 export const SearchContext = createContext();
@@ -264,7 +265,7 @@ export default function Home(props) {
                     </SearchContext.Provider>
                   </Grid>
                 </Grid>
-              ) : null}
+              ) : <EmptyList classes={classes}/>}
 
               {/* Grid for displaying todo items */}
               <Grid columns={12} className={classes.listGrid}>

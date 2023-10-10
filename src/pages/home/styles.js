@@ -74,5 +74,19 @@ const useStyles = makeStyles((theme) => ({
       top: "-3px",
     },
   },
+  emptyList: {
+    height: "100%",
+    "& svg": {
+      width: "40px",
+      height: "40px",
+      marginRight: "12px"
+    },
+    "& *": {
+      padding: "0 !important",
+      display: "flex", 
+      color: "#006400",
+      fontSize: "32px"
+    }
+  }
 }));
 export default useStyles;
