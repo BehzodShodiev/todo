@@ -127,6 +127,8 @@ const TodoItem = ({
                 sx={{
                   marginTop: isEditingTitle ? "16px" : "",
                   cursor: "text",
+                  whiteSpace: "pre-line",
+                  "&.ios": "pre-wrap" 
                 }}
                 onClick={handleDescriptionClick}
               >
